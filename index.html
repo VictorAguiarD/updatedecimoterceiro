@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Décimo Terceiro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Calculadora de Décimo Terceiro</h1>
+    <form id="calculator-form">
+        <label for="salario">Salário (R$):</label>
+        <input type="number" id="salario" step="0.01" placeholder="Ex: 3000" required>
+
+        <label for="meses">Meses Trabalhados:</label>
+        <input type="number" id="meses" min="1" max="12" placeholder="Ex: 6" required>
+
+        <button type="button" onclick="calcularDecimoTerceiro()">Calcular</button>
+    </form>
+
+    <div class="result-container" id="result-container" style="display: none;">
+        <p>Primeira Parcela: R$ <span id="primeira-parcela"></span></p>
+        <p>Segunda Parcela: R$ <span id="segunda-parcela"></span></p>
+        <p>Total: R$ <span id="total-decimo"></span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
